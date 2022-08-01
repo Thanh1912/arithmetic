@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.nyholmniklas</groupId>
+    <groupId>com.github.thanh1912</groupId>
     <artifactId>arithmetic</artifactId>
     <version>1.0.0</version>
     <build>
@@ -34,7 +34,7 @@
     <description>This is a sample library for a tutorial about
         publishing to Maven Central
     </description>
-    <url>http://github.com/nyholmniklas/arithmetic</url>
+    <url>http://github.com/Thanh1912/arithmetic</url>
 
     <licenses>
         <license>
@@ -106,7 +106,7 @@
 
     <scm>
         <connection>scm:git:git://github.com/Thanh1912/arithmetic.git</connection>
-        <developerConnection>scm:git:ssh://github.com:nyholmniklas/arithmetic.git</developerConnection>
+        <developerConnection>scm:git:ssh://github.com:Thanh1912/arithmetic.git</developerConnection>
         <url>http://github.com/Thanh1912/arithmetic</url>
     </scm>
 

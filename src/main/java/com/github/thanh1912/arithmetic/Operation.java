@@ -1,4 +1,4 @@
-package com.github.nyholmniklas.arithmetic;
+package com.github.thanh1912.arithmetic;
 
 import java.math.BigDecimal;
 
