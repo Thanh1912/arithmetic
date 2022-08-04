@@ -6,10 +6,7 @@ plugins {
 }
 
 group = "io.github.thanh1912"
-def versionSuffix = (System.env.CI == "true") ? "ci${System.env.GITHUB_RUN_NUMBER ?: ''}" : "local"
-version = "0.0.1-$versionSuffix"
-
-sourceCompatibility = 1.8
+version = "0.0.1"
 
 repositories {
     mavenCentral()
@@ -30,9 +27,9 @@ java {
 nexusPublishing {
     repositories {
         sonatype {
-            nexusUrl.set(uri("https://s01.oss.sonatype.org/service/local/"))
-            snapshotRepositoryUrl.set(uri("https://s01.oss.sonatype.org/content/repositories/snapshots/"))
-            username = "htp1912"
+            nexusUrl.set(uri("https://s01.oss.sonatype.org/content/repositories/snapshots/"))
+            snapshotRepositoryUrl.set(uri("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"))
+            username = "htphu"
             password = "G9rYZpge3Sa@iB"
         }
     }
@@ -41,11 +38,13 @@ publishing {
     publications {
         mavenJava(MavenPublication) {
             from(components.java)
+            artifact sourcesJar
+            artifact javadocJar
             pom {
                 name = 'project'
                 description = 'testing in gradle-nexus-publish-plugin'
                 url = 'https://github.com/Thanh1912/arithmetic'
-                inceptionYear = '2020'
+                inceptionYear = '2022'
                 licenses {
                     license {
                         name = 'The Apache License, Version 2.0'
