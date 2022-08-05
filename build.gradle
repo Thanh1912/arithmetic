@@ -27,7 +27,7 @@ java {
 nexusPublishing {
     repositories {
         sonatype {
-            nexusUrl.set(uri("https://s01.oss.sonatype.org/content/repositories/snapshots/"))
+            nexusUrl.set(uri("https://s01.oss.sonatype.org/service/local/"))
             snapshotRepositoryUrl.set(uri("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"))
             username = "htphu"
             password = "G9rYZpge3Sa@iB"
@@ -38,8 +38,6 @@ publishing {
     publications {
         mavenJava(MavenPublication) {
             from(components.java)
-            artifact sourcesJar
-            artifact javadocJar
             pom {
                 name = 'project'
                 description = 'testing in gradle-nexus-publish-plugin'
